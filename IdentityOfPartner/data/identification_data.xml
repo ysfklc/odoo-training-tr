@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id ="identification_demo1"
+            model="identification">
+        <field name="name">Demo Identification</field>
+        <field name="id_num">2019-12-31</field>
+        <field name="type">passport</field>
+    </record>
+    <record id ="identification_demo"
+            model="identification">
+        <field name="name">Yusuf Ali Kılıç</field>
+        <field name="id_num">1996-04-23</field>
+        <field name="type">driving licence</field>
+    </record>
+</odoo>

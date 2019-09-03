@@ -6,7 +6,7 @@ class Identification(models.Model):
     _description = 'IdentityOfPartner'
 
     name = fields.Char()
-    id_num = fields.Integer()
+    id_num = fields.Char()
     type = fields.Selection([
         ('passport', "Passport"),
         ('id card', "Id Card"),

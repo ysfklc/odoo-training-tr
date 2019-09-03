@@ -12,7 +12,7 @@
              'views/identification_view.xml',
              'security/ir.model.access.csv'
              ],
-    'demo': [ ],
+    'demo': ['data/identification_data.xml'],
     "license": "AGPL-3",
     'application': False,
     'installable': True,
