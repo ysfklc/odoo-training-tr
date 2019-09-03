@@ -2,23 +2,15 @@
 # Copyright 2017-Apertoso N.V. (<http://www.apertoso.be>)
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 {
-    "name": "Certification",
-    "summary": "Defines certifications for different purposes",
+    "name": "IdentityOfPartner",
+    "summary": "Defines Identity of the Partner",
     'version': '12.0.1.0.0',
-    "category": "Certification Management",
+    "category": "Identity Management",
     "website": "https://github.com/turkmenoglubugra",
     "author": "Grupo ESOC, Tecnativa, Odoo Community Association (OCA)",
-    "contributors": [
-        'Jairo Llopis <j.llopis@grupoesoc.es>',
-        'Richard deMeester <richard@willowit.com.au>',
-    ],
-    'data': ['security/ir.model.access.csv',
-             'views/certification_bodies_view.xml',
-             'views/certification_view.xml',
-             'views/res_partner_view.xml',
-             'views/standard_view.xml'
+    'data': [
              ],
-    'demo': ['data/certification_data.xml'],
+    'demo': [ ],
     "license": "AGPL-3",
     'application': False,
     'installable': True,
