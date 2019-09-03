@@ -5,5 +5,5 @@
         <field name="name">Demo Identification</field>
         <field name="id_num">2019-12-31</field>
         <field name="type">passport</field>
-    </record
+        </record>
 </odoo>
