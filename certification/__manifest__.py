@@ -3,22 +3,27 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 {
     "name": "Certification",
-    "summary": "Defines certitifcation for different purpose",
-    "author": "Grupo ESOC, Tecnativa, Odoo Community Association (OCA)",
+    "summary": "Defines certifications for different purposes",
     'version': '12.0.1.0.0',
     "category": "Certification Management",
-    "website": "https://github.com/ysfklc",
+    "website": "https://github.com/turkmenoglubugra",
+    "author": "Grupo ESOC, Tecnativa, Odoo Community Association (OCA)",
+    "contributors": [
+        'Jairo Llopis <j.llopis@grupoesoc.es>',
+        'Richard deMeester <richard@willowit.com.au>',
+    ],
+    'data': ['security/ir.model.access.csv',
+             'views/certification_bodies_view.xml',
+             'views/certification_view.xml',
+             'views/res_partner_view.xml',
+             'views/standard_view.xml'
+             ],
+    'demo': ['data/certification_data.xml'],
     "license": "AGPL-3",
-    'application': True,
+    'application': False,
     'installable': True,
     'auto_install': False,
-    "category":"Tools",
-    "depends": [
-        "base",
-    ],
-    "data": [
-        "security/ir.model.access.csv", 
-        "views/certification_view.xml", 
-        "views/standard_view.xml"
-    ]
+    'depends': ['base'],
+    'development status':"beta",
+    'maintainers':['ceeficent']
 }

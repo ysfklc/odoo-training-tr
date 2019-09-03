@@ -10,7 +10,7 @@
                 <field name="entity_id"/>
                 <field name="owner_id"/>
             </tree>
-        </field>
+    </field>
     </record>
     <record id="certification_form" model="ir.ui.view">
         <field name="name">Certification</field>
@@ -23,21 +23,26 @@
                         <field name="description"/>
                         <field name="date"/>
                         <field name="standard_id"/>
-                        <field name="entity_id"/>
+                        <button name="update_date_one_month" string="Update the validation date one month" type="object"/>
+                        <field name="entity_id" domain="[('is_certification_body','=','True')]"/>
                         <field name="owner_id"/>
+                        <button name="update_date_one_month" string="update date 1 month" type="object" />
+                        <field name="expiry_days"/>
+                        <field name="expiry_status"/>
                     </group>
-                </sheet>
+            </sheet>
             </form>
         </field>
-</record>
-<record id="certification" model="ir.actions.act_window">
-    <field name="name">Certification</field>
-    <field name="res_model">certification</field>
-    <field name="view_mode">tree,form</field>
-</record>
-<menuitem 
-    name="Certification"
-    id="certification_menu" 
-    sequence="5"
-    action="certification"/>
+    </record>
+    <record id="certification" model="ir.actions.act_window">
+        <field name="name">Certification</field>
+        <field name="res_model">certification</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+<menuitem
+name="Certification"
+id="certification_menu"
+sequence="5"
+action="certification"/>
+
 </odoo>

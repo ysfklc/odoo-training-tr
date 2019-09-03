@@ -1,9 +1,10 @@
+from odoo import models, fields, api
 from odoo import models,fields
 
+class CertificationStandard(models.Model):
 
-class certificationStandard(models.Model):
     _name = 'certification.standard'
     _description = 'Certification Types'
-    
+
     name = fields.Char()
     description = fields.Text()
