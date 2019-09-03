@@ -2,13 +2,15 @@
 # Copyright 2017-Apertoso N.V. (<http://www.apertoso.be>)
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 {
-    "name": "IdentityOfPartner",
+    "name": "Identity Of Partner",
     "summary": "Defines Identity of the Partner",
     'version': '12.0.1.0.0',
     "category": "Identity Management",
-    "website": "https://github.com/turkmenoglubugra",
-    "author": "Grupo ESOC, Tecnativa, Odoo Community Association (OCA)",
+    "website": "https://github.com/ysfklc",
+    "author": ["Yusuf Ali Kılıç"],
     'data': [
+             'views/identification_view.xml',
+             'security/ir.model.access.csv'
              ],
     'demo': [ ],
     "license": "AGPL-3",

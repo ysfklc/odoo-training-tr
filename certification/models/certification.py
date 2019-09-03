@@ -1,8 +1,7 @@
-from fields.extras import ValidationError
-
 from odoo import models, fields, api
-from odoo import models,fields
 from datetime import timedelta
+from odoo.exceptions import ValidationError
+
 
 class Certification(models.Model):
 
