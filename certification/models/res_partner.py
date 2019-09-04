@@ -1,5 +1,3 @@
-from odoo import models, fields
-from odoo import models, fields, api
 from odoo import models,fields
 
 

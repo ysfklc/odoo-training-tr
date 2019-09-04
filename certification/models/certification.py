@@ -4,7 +4,6 @@ from odoo.exceptions import ValidationError
 
 
 class Certification(models.Model):
-
     _name = 'certification'
     _description = 'Certification'
 
@@ -15,10 +14,8 @@ class Certification(models.Model):
     owner_id = fields.Many2one("res.partner")
     entity_id = fields.Many2one('res.partner')
     expiry_days = fields.Integer('Expiry Days', readonly=True, compute='_compute_expiry_days')
-    expiry_status = fields.Selection([
-        ('expired', "Expired"),
-        ('available', "Available")
-    ], readonly=True, compute='_compute_expiry_days', store=True)
+    expiry_status = fields.Selection([('expired', "Expired"), ('available', "Available")], readonly=True,
+                                     compute='_compute_expiry_days', store=True)
 
     @api.constrains('entity_id')
     def _check_entity_id(self):
