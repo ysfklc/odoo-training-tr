@@ -1,4 +1,5 @@
-from odoo import models,fields
+from odoo import models, fields
+
 
 class Standard(models.Model):
     _name = 'standard'
