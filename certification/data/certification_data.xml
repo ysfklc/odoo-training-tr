@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo noupdate="1">
+<odoo noupdate="0">
     <record id ="entity_demo"
             model="res.partner">
         <field name="name">Entity Demo</field>
@@ -18,7 +18,7 @@
     <record id ="certification_demo"
             model="certification">
         <field name="number">Demo Certification</field>
-        <field name="date">2019-12-31</field>
+        <field name="date">2019-12-25</field>
         <field name="standard_id" eval="ref('standard_demo')"/>
         <field name="entity_id" eval="ref('entity_demo')"/>
         <field name="owner_id" eval="ref('supplier_demo')"/>
