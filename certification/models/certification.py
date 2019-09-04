@@ -13,15 +13,12 @@ class Certification(models.Model):
     standard_id = fields.Many2one("certification.standard")
     owner_id = fields.Many2one("res.partner")
     entity_id = fields.Many2one('res.partner')
-    expiry_days = fields.Integer('Expiry Days',
-        readonly=True,
-        compute='_compute_expiry_days')
+    expiry_days = fields.Integer('Expiry Days', readonly=True,
+                                 compute='_compute_expiry_days')
     expiry_status = fields.Selection([
         ('expired', "Expired"),
         ('available', "Available")],
-        readonly=True,
-        compute='_compute_expiry_days',
-        store=True)
+        readonly=True,compute='_compute_expiry_days',store=True)
 
     @api.constrains('entity_id')
     def _check_entity_id(self):

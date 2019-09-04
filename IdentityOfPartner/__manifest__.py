@@ -22,4 +22,3 @@
     'development status': "beta",
     'maintainers': ['ceeficent']
 }
-
