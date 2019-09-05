@@ -20,7 +20,6 @@ class Trip(models.Model):
         readonly=True, compute='_compute_expiry_days', store=True)
 
     quota = fields.Integer()
-    remain = 0
 
     @api.constrains('expiry_status')
     def _check_status(self):
@@ -36,8 +35,7 @@ class Trip(models.Model):
             else:
                 self.expiry_status = 'expired'
 
-    @api.constrains('quota','remain')
+    @api.constrains('quota','entity_id')
     def _check_quota(self):
-        self.remain = self.quota - self.entity_id
-        if self.remain < 0:
+        if self.quota - len(self.entity_id) < 0:
             raise ValidationError('Quota is full')
