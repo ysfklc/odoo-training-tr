@@ -18,17 +18,14 @@ class Trip(models.Model):
         ('expired', "Expired"),
         ('available', "Available")],
         readonly=True, compute='_compute_expiry_days', store=True)
-    is_trip_body = fields.Boolean(string='It is an entity', default='True',
-                                  help='Check this box if the contact is a trip entity')
 
     quota = fields.Integer()
-
-
+    remain = 0
 
     @api.constrains('expiry_status')
     def _check_status(self):
-            if self.expiry_status == "expired":
-                raise ValidationError('This trip date has expired!!')
+        if self.expiry_status == "expired":
+            raise ValidationError('This trip date has expired!!')
 
     @api.depends('date')
     def _compute_expiry_days(self):
@@ -39,4 +36,8 @@ class Trip(models.Model):
             else:
                 self.expiry_status = 'expired'
 
-
+    @api.constrains('quota','remain')
+    def _check_quota(self):
+        self.remain = self.quota - self.entity_id
+        if self.remain < 0:
+            raise ValidationError('Quota is full')
