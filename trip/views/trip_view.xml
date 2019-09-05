@@ -1,0 +1,45 @@
+<odoo>
+    <record id="trip_view_list" model="ir.ui.view">
+        <field name="name">Trip</field>
+        <field name="model">trip</field>
+        <field name="arch" type="xml">
+            <tree string="Trip">
+                <field name="name"/>
+                <field name="description"/>
+                <field name="day_count"/>
+                <field name="date"/>
+                <field name="entity_id"/>
+                <field name="price"/>
+            </tree>
+        </field>
+    </record>
+    <record id="trip_form" model="ir.ui.view">
+        <field name="name">Trip</field>
+        <field name="model">trip</field>
+        <field name="arch" type="xml">
+            <form string="Trip">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                        <field name="day_count"/>
+                        <field name="date"/>
+                        <field name="entity_id"/>
+                        <field name="price"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="trip" model="ir.actions.act_window">
+        <field name="name">Trip</field>
+        <field name="res_model">trip</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem
+            name="Trip"
+            id="trip_menu"
+            sequence="5"
+            action="trip"/>
+
+</odoo>

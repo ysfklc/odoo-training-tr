@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="trip_bodies_view_list" model="ir.ui.view">
+        <field name="name">Trip Bodies</field>
+        <field name="model">res.partner</field>
+        <field name="arch" type="xml">
+            <tree string="Trip Bodies">
+                <field name="name"/>
+                <field name="phone"/>
+            </tree>
+    </field>
+    </record>
+    <record id="action_trip_bodies" model="ir.actions.act_window">
+        <field name="name">Trip Bodies</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="action_list_trip_id" model="ir.actions.act_window">
+        <field name="name">Trip Bodies</field>
+        <field name="res_model">trip</field>
+        <field name="view_mode">tree</field>
+    </record>
+</odoo>
