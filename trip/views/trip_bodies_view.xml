@@ -15,9 +15,4 @@
         <field name="res_model">res.partner</field>
         <field name="view_mode">tree,form</field>
     </record>
-    <record id="action_list_trip_id" model="ir.actions.act_window">
-        <field name="name">Trip Bodies</field>
-        <field name="res_model">trip</field>
-        <field name="view_mode">tree</field>
-    </record>
 </odoo>

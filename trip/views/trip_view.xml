@@ -9,6 +9,7 @@
                 <field name="day_count"/>
                 <field name="date"/>
                 <field name="entity_id"/>
+                <field name="quota"/>
                 <field name="price"/>
             </tree>
         </field>
@@ -26,6 +27,9 @@
                         <field name="date"/>
                         <field name="entity_id"/>
                         <field name="price"/>
+                        <field name="quota"/>
+                        <field name="expiry_days"/>
+                        <field name="expiry_status" domain="[('is_trip_body','=','True')]"/>
                     </group>
                 </sheet>
             </form>
